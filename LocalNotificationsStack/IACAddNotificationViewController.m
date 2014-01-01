@@ -50,8 +50,8 @@
     [IACNotificationsManager createNotificationWithTitle:self.txfNotificationTitle.text
                                                     date:self.datePickerNotification.date
                                              buttonTitle:@"Go to App"
-                                           repeatedDaily:self.swtDaily.state
-                                          repeatedWeekly:self.swtWeekly.state];
+                                           repeatedDaily:self.swtDaily.isOn
+                                          repeatedWeekly:self.swtWeekly.isOn];
     
     [self.presentingViewController dismissViewControllerAnimated:YES completion:^{
         [self.delegate IACAddNotificationViewControllerDidEndEditing:self];
